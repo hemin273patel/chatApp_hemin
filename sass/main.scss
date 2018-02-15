@@ -3,27 +3,32 @@
 	margin: 0; padding: 0; box-sizing: border-box;
 }
 
-body { 
-    font: 33px;
+body {
+    font-size: 33px;
     font-family: serif;
-    background-image: url("../images/1.jpg");
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    background-repeat: repeat-y;
+		background-color: #444444;
+		height: 100%;
+		background-position: center;
+		background-size: cover;
+		background-repeat: repeat-y;
 }
 
 #cont{
-    background-image: url("../images/1.jpg");
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+	font-size: 33px;
+	background-color: #444444;
+	font-family: serif;
+	height: 100%;
+	background-position: center;
+	background-size: cover;
+	background-repeat: repeat-y;
 }
+
+
 
 #para1{
     font-size: 25px;
-    color: #00ffd4;
+    color: #ffffff;
+		margin-bottom: 10px;
     text-align: center;
 }
 
@@ -31,8 +36,8 @@ body {
     width: 50%;
     padding: 10px;
     font-size: 20px;
-    color: #ffffff;
-    background-color: #000000;
+    color: #000000;
+    background-color: #999999;
     margin-top: 20px;
     border: 0px;
     margin: 0 auto;
@@ -48,16 +53,25 @@ form {
 	bottom: 0;
 	width: 100%;
 
-	input { border: 0; padding: 10px; width: 90%; margin-right: 0.5%; float: left; }
+	input { border: 0; padding: 12px; width: 90%; margin-right: 0.5%; background-color: #999999; font-size: 20px; float: left; }
 
-	button { width: 9%; background: rgb(130, 224,255); border: none; padding: 10px; float: right;}
+	button { width: 9%; border-radius: 10px; background: #6fccf7; color: #ffffff; font-weight: 300; font-size: 20px; font-family: serif; border: none; padding: 12px; float: right;}
 }
 
 #mainHead{
-    color: #00ffd4;
-    font-size: 33px;
+    color: #ffffff;
+    font-size: 45px;
     text-align: center;
+		margin-bottom: 10px;
     font-family: serif;
+}
+
+#popmsg{
+	background-color: #999999;
+	color: #000000;
+	text-align: center;
+	border-radius: 10px;
+	font-size: 15px;
 }
 
 #messages {

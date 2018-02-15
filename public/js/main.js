@@ -42,11 +42,11 @@
        // e.preventDefault();// block default event(refresh page)
        nickName = (nickName && nickName.length > 0) ? nickName : 'user';
 
-      socket.emit('typing', `${nickName}.value` );
+      socket.emit('typing', `${nickName}` );
    });
 
    socket.on('typing', function(data){
-      typing.innerHTML =   data + 'is typing' ;
+      typing.innerHTML =   data + '\nis typing' ;
    });
 
 
