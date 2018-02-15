@@ -9,18 +9,8 @@ app.use(require('./routes/portfolio'));
 // server up static files
 app.use(express.static('public'));
 
-//app.get('/', (req, res)=>{
-//    res.sendFile(__dirname+ '/index.html');
-//    
-//});
-//app.get('/contact', (req, res)=>{
-//    res.sendFile(__dirname+ '/contact.html');
-//    
-//});
-//app.get('/portfolio', (req, res)=>{
-//    res.sendFile(__dirname+ '/portfolio.html');
-//    
-//});
+
+
 
 
 
@@ -35,15 +25,20 @@ io.attach(server);
 io.on('connection', socket => {
     console.log('user has connected');
     io.emit('chat Message', {for : 'everyone', message : `${socket.id} is here!`});
-    
+
     socket.on('chat message', msg =>{
         io.emit('chat message', { for : 'everyone', message : msg});
     });
-    
-    
+
+
+    socket.on('typing', function(data){
+            socket.emit('typing', data)
+        });
+
+
     socket.on('disconnect', () => {
         console.log('a user has disconnected');
-    });
-    io.emit('disconnect message', `${socket.id} has left the building!`);
-});
+        io.emit('disconnect message', `${socket.id} has left the building!`);
 
+    });
+});
